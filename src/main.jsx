@@ -11,7 +11,14 @@ import Parallel from "./parallel.jsx";
 import Optimistic from "./optimistic.jsx";
 import Dependant from "./dependant.jsx";
 
-export const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 10000,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const router = createBrowserRouter([
   {
