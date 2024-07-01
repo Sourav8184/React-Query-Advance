@@ -133,7 +133,7 @@ function Products() {
               Prev
             </button>
             <button
-              disabled={skip + limit > products.total}
+              disabled={skip + limit > products?.total}
               className="bg-purple-500 px-4 py-1 text-white rounded"
               onClick={() => {
                 handleSkip(limit);
