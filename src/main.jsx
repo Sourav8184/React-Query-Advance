@@ -8,8 +8,6 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import App from "./App.jsx";
 import Products from "./paginated.jsx";
 import Parallel from "./parallel.jsx";
-import Optimistic from "./optimistic.jsx";
-import Dependant from "./dependant.jsx";
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,14 +30,6 @@ const router = createBrowserRouter([
   {
     path: "parallel",
     element: <Parallel />,
-  },
-  {
-    path: "optimistic",
-    element: <Optimistic />,
-  },
-  {
-    path: "dependant",
-    element: <Dependant />,
   },
 ]);
 
