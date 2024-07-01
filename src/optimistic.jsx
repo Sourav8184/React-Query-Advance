@@ -1,7 +1,7 @@
 import React from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { queryClient } from "./main";
-
+import { Link } from "react-router-dom";
 const Optimistic = () => {
   const { data: posts } = useQuery({
     queryKey: ["posts"],
@@ -38,6 +38,10 @@ const Optimistic = () => {
 
   return (
     <>
+      <Link to={"/"}>
+        <button>Home</button>
+      </Link>
+      <br />
       <div className="p-4 flex gap-12">
         <div className="flex-1">
           <form className="flex flex-col" onSubmit={handleSubmit}>

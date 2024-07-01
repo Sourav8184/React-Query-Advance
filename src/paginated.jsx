@@ -2,7 +2,7 @@ import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { debounce, split } from "lodash";
-
+import { Link } from "react-router-dom";
 function Products() {
   const [searchParams, setSearchParams] = useSearchParams({
     skip: 0,
@@ -47,6 +47,9 @@ function Products() {
   console.log(categories);
   return (
     <>
+      <Link to={"/"}>
+        <button>Home</button>
+      </Link>
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <div className="flex items-center justify-between">

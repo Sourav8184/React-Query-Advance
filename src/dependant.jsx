@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-
+import { Link } from "react-router-dom";
 const fetchPostById = async (postId) => {
   const data = await fetch(`https://dummyjson.com/posts/${postId}`).then(
     (res) => res.json()
@@ -28,6 +28,9 @@ const Dependant = () => {
 
   return (
     <div className="p-12">
+      <Link to={"/"}>
+        <button>Home</button>
+      </Link>
       <h1 className="text-lg font-bold">Post:</h1>
       {isLoading ? <p>Loading the post</p> : <h2>{post?.title}</h2>}
       <br />

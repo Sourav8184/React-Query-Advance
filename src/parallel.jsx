@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery, useQueries } from "@tanstack/react-query";
-
+import { Link } from "react-router-dom";
 const Parallel = () => {
   const [userIds, setUserIds] = React.useState([1, 2]);
 
@@ -30,6 +30,10 @@ const Parallel = () => {
 
   return (
     <div>
+      <Link to={"/"}>
+        <button>Home</button>
+      </Link>
+      <br />
       <button
         onClick={() =>
           setUserIds((prev) => {
